@@ -9,4 +9,4 @@ case class Folder(guid: Guid[Folder], parentGuid: Option[Guid[Folder]], entityTy
 /**
  * Locates an entity within a folder.
  */
-case class EntityInFolder[E](guid: Guid[EntityInFolder], folderGuid: Guid[Folder], entityGuid: Guid[E])
+case class EntityInFolder[E](guid: Guid[EntityInFolder[E]], folderGuid: Guid[Folder], entityGuid: Guid[E])
