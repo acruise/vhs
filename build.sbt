@@ -12,3 +12,9 @@ libraryDependencies := Seq(
   "io.spray" %% "spray-can" % "1.3.2",
   "io.spray" %% "spray-routing" % "1.3.2"
 )
+
+lazy val root = (project in file(".")).aggregate(model, server)
+
+lazy val model = project
+
+lazy val server = (project in file("project")).dependsOn(model)
